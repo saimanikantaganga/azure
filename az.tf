@@ -1,5 +1,17 @@
+terraform {
+    required_providers {
+        azurerm = {
+            source = "harshicorp/azurerm"
+            version = "-2.97.0"
+        }
+    }
 
-resource "azurerm_resource_group" "demo" {
-  name     = "demo_resource_group"
-  location = "West Europe"
+}
+provider "azurerm" {
+    features {}
+}
+
+resource "azurerm_resource_group" "examp" {
+    name     = "example"
+    location = "West Europe"
 }
